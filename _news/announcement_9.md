@@ -4,4 +4,4 @@ date: 2023-10-17 08:00:00-0400
 inline: true
 ---
 
-New survey on causal generative modeling posted to arXiv!
+Check out our new survey [From Identifiable Causal Representations to Controllable Counterfactual Generation](https://arxiv.org/abs/2310.11011) posted to arXiv!

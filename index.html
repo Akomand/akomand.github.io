@@ -14,6 +14,35 @@
 
 <title>Aneesh Komanduri - Homepage</title>
 
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            width: 50%;
+        }
+        .section h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .ul {
+            padding: 0;
+        }
+        .ul .li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        .education .degree {
+            font-weight: bold;
+        }
+        .education .institution {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
 
 <meta property="og:locale" content="en-US">
 <meta property="og:site_name" content="Aneesh Komanduri">
@@ -195,8 +224,6 @@
         <li><a href="mailto:akomandu@uark.edu"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li><li>
 
         <li><a href="https://www.linkedin.com/in/akomand/"><i class="fab fa-fw fa-linkedin"></i> LinkedIn</a></li>
-      
-        <li><a href="https://twitter.com/akomandML"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
 
         <li><a href="https://github.com/Akomand"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       
@@ -225,13 +252,39 @@
 
       <section class="page__content" itemprop="text">
         <p>
-          I am a fourth-year Ph.D. student in the <a href="https://eecs.uark.edu/", target="_blank">Department of Electrical Engineering & Computer Science</a> at the <a href="https://www.uark.edu/", target="_blank">University of Arkansas</a>, advised by <a href="https://csce.uark.edu/~xintaowu/", target="_blank">Dr. Xintao Wu</a>. Previously, I obtained my bachelor's degrees in computer science, computer engineering, and applied mathematics at the University of Arkansas, where I graduated <i>Summa Cum Laude</i>. 
+          I am a fourth-year Ph.D. student in the <a href="https://eecs.uark.edu/", target="_blank">Department of Electrical Engineering & Computer Science</a> at the <a href="https://www.uark.edu/", target="_blank">University of Arkansas</a>, advised by <a href="https://csce.uark.edu/~xintaowu/", target="_blank">Dr. Xintao Wu</a>. My research interest broadly spans causality, generative modeling, and applications in trustworthy AI. Specifically, my current research mainly focuses on <b>causal representation learning</b> and <b>counterfactual generation</b>. I am also particularly interested in the application of causal generative models in the healthcare domain. Previously, I obtained my Master's degree in Computer Science and Bachelor's degrees in Computer Science, Computer Engineering, and Applied Mathematics at the University of Arkansas, where I graduated <i>Summa Cum Laude</i>. 
 
         </p>
 
-        <p>
-        <b>Research Interests</b>: I am broadly interested in <b>causality</b>, <b>generative modeling</b>, and applications in <b>trustworthy AI</b>. My current research mainly focuses on <b>causal representation learning,</b> <b>counterfactual generation</b>, and recently<b> mechanistic interpretability in large-scale pretrained generative models</b>. 
-        </p>
+        <div class="container">
+        <div class="section interests">
+            <h2>Interests</h2>
+            <ul class="ul">
+                <li class="li">Causality and Deep Learning</li>
+                <li class="li">Probabilistic Generative Modeling</li>
+                <li class="li">Large Language Models</li>
+                <li class="li">Interpretable and Explainable AI</li>
+                <li class="li">AI for Science and Healthcare</li>
+            </ul>
+        </div>
+        <div class="section education">
+            <h2>Education</h2>
+            <ul class="ul">
+                <li class="li">
+                    <span class="degree">Ph.D. Computer Science, 2026</span><br>
+                    <span class="institution">University of Arkansas</span>
+                </li>
+                <li class="li">
+                    <span class="degree">M.S. Computer Science, 2024</span><br>
+                    <span class="institution">University of Arkansas</span>
+                </li>
+                <li class="li">
+                    <span class="degree">B.S. CS, CE, & Applied Math, 2021</span><br>
+                    <span class="institution">University of Arkansas</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 
         <p>
           If you are interested in causality and generative AI or want to talk about potential collaborations, feel free to reach out to me at akomandu [at] uark [dot] edu!
@@ -244,7 +297,7 @@
 
 <h1 id="news">News</h1>
 
-<div style="overflow-y: scroll; height: 200px; border: 0px; padding: 5px;">
+<div style="overflow-y: scroll; height: 400px; border: 0px; padding: 5px;">
     <ul style="list-style-type: disc; padding-left: 20px;">
         <li style="margin-top: 5px; margin-bottom: 5px;"><strong>Nov 2, 2024.</strong> Selected to participate in <a href="https://aaai.org/conference/aaai/aaai-25/doctoral-consortium-call/", target=”_blank”>AAAI 2025 Doctoral Consortium</a>!</li>
         <li style="margin-top: 5px; margin-bottom: 5px;"><strong>Sep 23, 2024.</strong> Invited to serve as a reviewer for <a href="https://calm-workshop-2024.github.io/", target=”_blank”>CALM@NeurIPS 2024 Workshop</a></li>

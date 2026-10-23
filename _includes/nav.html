@@ -1,0 +1,18 @@
+<nav class="nav" aria-label="Section navigation">
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+    <span class="nav__toggle-icon nav__toggle-icon--menu">{% include icon.html name="menu" %}</span>
+    <span class="nav__toggle-icon nav__toggle-icon--close">{% include icon.html name="close" %}</span>
+    <span class="nav__toggle-label">Menu</span>
+  </button>
+  <div class="nav__links" id="nav-menu">
+    <a href="#about" class="nav__link" data-section="about">About</a>
+    <a href="#projects" class="nav__link" data-section="projects">Projects</a>
+    <a href="#publications" class="nav__link" data-section="publications">Publications</a>
+    <a href="#awards" class="nav__link" data-section="awards">Awards</a>
+    <a href="#service" class="nav__link" data-section="service">Service</a>
+  </div>
+  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+    <span class="theme-toggle-icon theme-toggle-icon--sun">{% include icon.html name="sun" %}</span>
+    <span class="theme-toggle-icon theme-toggle-icon--moon">{% include icon.html name="moon" %}</span>
+  </button>
+</nav>

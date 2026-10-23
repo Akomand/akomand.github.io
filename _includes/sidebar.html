@@ -1,0 +1,20 @@
+<aside class="sidebar">
+  <div class="sidebar__inner">
+    <img class="sidebar__avatar" src="{{ '/assets/img/aneesh_photo.jpeg' | relative_url }}" alt="{{ site.author.name }}">
+    <h1 class="sidebar__name">{{ site.author.name }}</h1>
+
+    <p class="sidebar__title">{{ site.author.bio }}<br>Dept. of Biomedical Informatics<br>CU Anschutz Medical Campus</p>
+    <p class="sidebar__location">{% include icon.html name="location" %} {{ site.author.location }}</p>
+
+    <ul class="sidebar__social">
+      {% for link in site.data.social %}
+      <li>
+        <a href="{{ link.url }}" target="_blank" rel="noopener">
+          {% include icon.html name=link.icon %}
+          <span>{{ link.label }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>

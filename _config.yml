@@ -1,0 +1,20 @@
+title: Aneesh Komanduri
+description: >-
+  Postdoctoral Research Scientist, Dept. of Biomedical Informatics,
+  CU Anschutz Medical Campus. Causal representation learning, generative
+  modeling, and LLM reasoning.
+url: "https://akomand.github.io"
+baseurl: ""
+author:
+  name: "Aneesh Komanduri, Ph.D."
+  bio: "Postdoctoral Research Scientist"
+  location: "Denver, CO"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

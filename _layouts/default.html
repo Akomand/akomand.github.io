@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') {
+        document.documentElement.setAttribute('data-theme', stored);
+      }
+    } catch (e) {}
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.author.name }}{% if page.title %} · {{ page.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<meta property="og:title" content="{{ site.author.name }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:type" content="profile">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="topbar">
+    {% include nav.html %}
+  </header>
+  <div class="page">
+    {% include sidebar.html %}
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+  <script>
+    (function () {
+      var sections = Array.prototype.slice.call(document.querySelectorAll('main.content section[id]'));
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav__link'));
+      if (!sections.length || !links.length) return;
+
+      var byId = {};
+      links.forEach(function (link) {
+        byId[link.dataset.section] = link;
+      });
+
+      var setActive = function (id) {
+        links.forEach(function (link) { link.classList.remove('is-active'); });
+        if (byId[id]) byId[id].classList.add('is-active');
+      };
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+      sections.forEach(function (section) { observer.observe(section); });
+    })();
+
+    (function () {
+      var toggle = document.querySelector('.nav__toggle');
+      var menu = document.querySelector('.nav__links');
+      if (!toggle || !menu) return;
+
+      var closeMenu = function () {
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      };
+
+      toggle.addEventListener('click', function () {
+        var isOpen = toggle.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menu.classList.toggle('is-open', isOpen);
+      });
+
+      menu.querySelectorAll('.nav__link').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+
+      var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      var effectiveTheme = function () {
+        var explicit = root.getAttribute('data-theme');
+        if (explicit === 'light' || explicit === 'dark') return explicit;
+        return systemPrefersDark.matches ? 'dark' : 'light';
+      };
+
+      var sync = function () {
+        btn.classList.toggle('is-dark', effectiveTheme() === 'dark');
+      };
+      sync();
+
+      btn.addEventListener('click', function () {
+        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+      });
+
+      systemPrefersDark.addEventListener('change', function () {
+        if (!root.getAttribute('data-theme')) sync();
+      });
+    })();
+
+    (function () {
+      document.querySelectorAll('.pub-card__abstract-toggle').forEach(function (btn) {
+        var abstract = btn.closest('.pub-card__links').nextElementSibling;
+        if (!abstract || !abstract.classList.contains('pub-card__abstract')) return;
+
+        btn.addEventListener('click', function () {
+          var isOpen = abstract.hidden;
+          abstract.hidden = !isOpen;
+          btn.classList.toggle('is-open', isOpen);
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

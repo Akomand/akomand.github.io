@@ -1,0 +1,19 @@
+- title: "Uncertainty Quantification in Large Language Models"
+  bullets:
+    - text: "Proposed a label-free, causal intervention-based uncertainty method for LLMs, which detects incorrect answers across 3 models and 5 QA benchmarks, provides interpretability, and improves on output-based uncertainty baselines"
+    - text: "Built an efficient uncertainty-aware multi-agent LLM orchestration framework integrating specialized agents and lightweight information-theoretic compression mechanisms (including token masking, sentence masking, and small model summarization) trained via group relative policy optimization (GRPO)"
+
+- title: "Trustworthy Vision-Language Models"
+  bullets:
+    - text: "Engineered a robust benchmarking framework for causal reasoning in LVLMs; annotated three physical system image datasets, formulated three novel causal tasks, and benchmarked 9 models under zero-shot, few-shot, and chain-of-thought prompting"
+      tag: "EMNLP'25"
+    - text: "Established a realistic setting for unlearning sensitive information in LVLMs and designed a resource-efficient, cross-attention guided method that targets least-attended visual tokens, significantly improving unlearning-utility trade-offs compared to full fine-tuning baselines"
+      tag: "LockLLM@NeurIPS'25"
+
+- title: "Causal Generative Modeling"
+  bullets:
+    - text: "Proposed and implemented theoretically novel and empirically robust VAE framework for causal representation learning on high-dimensional data, outperforming state-of-the-art baselines by 15%–20% in disentanglement metrics"
+      tag: "IJCAI'24"
+    - text: "Designed a novel interpretable causally-aware diffusion model for generating high-quality image counterfactuals that outperforms state-of-the-art baseline methods in the quality of the generated counterfactuals along both quantitative and qualitative metrics"
+      tag: "ECAI'24"
+    - text: "Built FM-CGM, a zero-shot pipeline that pairs a reasoning VLM with Stable Diffusion XL and a new cross-attention guidance method (CSG) to generate causally consistent counterfactual images, outperforming DDIM and DDPM inversion on both edit accuracy and minimality"

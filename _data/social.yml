@@ -1,0 +1,18 @@
+- label: CV
+  url: cv/GradCV.pdf
+  icon: file
+- label: Google Scholar
+  url: https://scholar.google.com/citations?user=IMtCc1QAAAAJ&hl=en
+  icon: scholar
+- label: DBLP
+  url: https://dblp.org/pid/304/2405.html
+  icon: scholar
+- label: Email
+  url: mailto:aneesh.komanduri@gmail.com
+  icon: email
+- label: LinkedIn
+  url: https://www.linkedin.com/in/akomand/
+  icon: linkedin
+- label: GitHub
+  url: https://github.com/Akomand
+  icon: github

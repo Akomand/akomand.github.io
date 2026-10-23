@@ -1,0 +1,292 @@
+- section: Manuscripts
+  entries:
+    - venue: "Preprint"
+      title: "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness"
+      authors: "Aneesh Komanduri, Majid Afshar, Timothy A. Miller, Yanjun Gao"
+      venue_full: "arXiv Preprint, 2026"
+      keywords: ["Uncertainty Quantification", "Interpretability", "LLMs"]
+      abstract: >-
+        Large language models (LLMs) are increasingly used in critical domains, where their
+        susceptibility to hallucinations makes reliable and interpretable uncertainty
+        quantification essential. We introduce the concept of mechanistic uncertainty, which
+        characterizes uncertainty through the stability of the internal mechanisms supporting
+        a model's response. We propose the causal robustness margin, defined as the minimum
+        internal intervention required to deviate the model's output, and operationalize it
+        using Jacobian Lens (Jlens) concept steering vectors. Across three open-source models
+        and five question-answering datasets, we show incorrect and uncertain responses
+        exhibit smaller margins, indicating greater sensitivity to internal interventions, and
+        the causal robustness margin complements conventional output-based uncertainty
+        methods. Finally, in a controlled knowledge injection experiment, correctly learned
+        facts show increased margins after training, suggesting that causal robustness
+        provides a mechanistically grounded signal of uncertainty.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2610.22636
+    - venue: "Preprint"
+      title: "Leveraging Foundation Models for Causal Generative Modeling"
+      authors: "Aneesh Komanduri, Xintao Wu"
+      venue_full: "arXiv Preprint, 2026"
+      keywords: ["Causal Generative Modeling", "Foundation Models", "Counterfactual Generation"]
+      abstract: >-
+        Causal generative modeling is essential for developing reliable and transparent AI
+        systems capable of counterfactual reasoning. While existing approaches focus on
+        integrating causal constraints during the training of generative models, they often
+        lack a unified framework to leverage the zero-shot reasoning capabilities of
+        pretrained foundation models. We introduce FM-CGM, a modular framework for end-to-end
+        visual causal reasoning using pretrained foundation models. FM-CGM formalizes the
+        causal pipeline through three core components: a concept extractor, a concept
+        manipulator, and a counterfactual generator. By leveraging a large reasoning model for
+        causal inference and a text-to-image diffusion model for generation, our approach
+        enables zero-shot causal discovery, intervention, and counterfactual generation. We
+        then develop Causal Semantic Guidance (CSG), a cross-attention-based mechanism that
+        ensures semantic interventions propagate to descendant concepts while preserving
+        invariant regions. We empirically show that our approach can identify plausible causal
+        structures and is suitable for faithful counterfactual image generation.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2605.23861
+
+- section: Published Papers
+  entries:
+    - venue: "IEEE BigData'26"
+      title: "Cross-Modal Attention Guided Unlearning in Vision-Language Models"
+      authors: "Karuna Bhaila, Aneesh Komanduri, Minh-Hao Van, Xintao Wu"
+      venue_full: "Proceedings of the IEEE International Conference on Big Data, 2026"
+      also: 'Also appeared in non-archival <a href="https://lock-llm.github.io/" target="_blank">NeurIPS 2025 Lock-LLM Workshop</a>'
+      keywords: ["Machine Unlearning", "Vision-Language Models", "Privacy"]
+      abstract: >-
+        Vision-Language Models (VLMs) have demonstrated immense capabilities in multi-modal
+        understanding and inference tasks such as Visual Question Answering (VQA), which
+        requires models to infer outputs based on visual and textual context simultaneously.
+        Such inference abilities of large-scale pretrained models are often attributed to the
+        massive scale of pre-training data collected across several domains. However, the
+        models may memorize private and/or sensitive information during training and
+        regurgitate it in inference. Recently, machine unlearning has been leveraged to
+        address the leakage of private data in LLMs. VLMs add a layer of complexity to this
+        process, as the visual context in the query may also contain sensitive information in
+        addition to the text. To address this issue, we explore unlearning for vision-language
+        models, specifically for the VQA task. We explore the role of visual tokens for output
+        generation in VLMs using cross-modal attention and utilize it to formulate Cross-Modal
+        Attention Guided Unlearning (CAGUL), a lightweight and efficient VLM unlearning
+        framework. In contrast to computationally expensive model finetuning methods, CAGUL
+        utilizes external modules to encode unlearning information in visual tokens of low
+        importance for relevant queries. We find that the transformed visual tokens not only
+        prevent leakage but also retain reference model behavior. Experimental results show
+        that our method performs better or on par with finetuning-based baselines without
+        altering the pre-trained model parameters or incurring retraining costs, making it a
+        practical and effective unlearning solution for VLMs.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2510.07567
+
+    - venue: "EMNLP'25 Main"
+      title: "CausalVLBench: Benchmarking Visual Causal Reasoning in Large Vision-Language Models"
+      authors: "Aneesh Komanduri, Karuna Bhaila, Xintao Wu"
+      venue_full: "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, 2025"
+      keywords: ["Causal Reasoning", "Vision-Language Models", "Benchmark"]
+      abstract: >-
+        Large language models (LLMs) have shown remarkable ability in various language tasks,
+        especially with their emergent in-context learning capability. Extending LLMs to
+        incorporate visual inputs, large vision-language models (LVLMs) have shown impressive
+        performance in tasks such as recognition and visual question answering (VQA). Despite
+        increasing interest in the utility of LLMs in causal reasoning tasks such as causal
+        discovery and counterfactual reasoning, there has been relatively little work
+        showcasing the abilities of LVLMs on visual causal reasoning tasks. We take this
+        opportunity to formally introduce a comprehensive causal reasoning benchmark for
+        multi-modal in-context learning from LVLMs. Our CausalVLBench encompasses three
+        representative tasks: causal structure inference, intervention target prediction, and
+        counterfactual prediction. We evaluate the ability of state-of-the-art open-source
+        LVLMs on our causal reasoning tasks across three causal representation learning
+        datasets and demonstrate their fundamental strengths and weaknesses. We hope that our
+        benchmark elucidates the drawbacks of existing vision-language models and motivates
+        new directions and paradigms in improving the visual causal reasoning abilities of
+        LVLMs.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2506.11034
+        - label: Proceedings
+          url: https://aclanthology.org/2025.emnlp-main.1561/
+        - label: Poster
+          url: "pdfs/EMNLP'25_Poster_Final.pdf"
+        - label: Code
+          url: https://github.com/Akomand/CausalVLBench
+
+    - venue: "AAAI'25"
+      title: "Toward Causal Generative Modeling: From Representation to Generation"
+      authors: "Aneesh Komanduri"
+      venue_full: "Proceedings of the 39th AAAI Conference on Artificial Intelligence, 2025"
+      keywords: ["Causal Representation Learning", "Generative Modeling", "Doctoral Consortium"]
+      abstract: >-
+        Deep learning has given rise to the field of representation learning, which aims to
+        automatically extract rich semantics from data. However, there have been several
+        challenges in the generalization capabilities of deep learning models. Recent works
+        have highlighted beneficial properties of causal models that are desirable for
+        learning robust models under distribution shifts. Thus, there has been a growing
+        interest in causal representation learning for achieving generalizability in tasks
+        involving reasoning and planning. The goal of my dissertation is to develop
+        theoretical intuitions and practical algorithms that uncover the nature of causal
+        representations and their applications. In my work, I focus on causal generative
+        modeling with an emphasis on either representation or generation. For representation
+        learning, I investigate the disentanglement of causal representations through the lens
+        of independent causal mechanisms. For generation tasks, I develop algorithms for
+        counterfactual generation under weak supervision settings by leveraging recent
+        advances in generative modeling. The proposed approaches have been empirically shown
+        to be effective in achieving disentanglement and generating counterfactuals.
+      links:
+        - label: Proceedings
+          url: https://ojs.aaai.org/index.php/AAAI/article/view/35215
+
+    - venue: "ECAI'24"
+      title: "Causal Diffusion Autoencoders: Toward Counterfactual Generation via Diffusion Probabilistic Models"
+      authors: "Aneesh Komanduri, Chen Zhao, Feng Chen, Xintao Wu"
+      venue_full: "Proceedings of the 27th European Conference on Artificial Intelligence, 2024"
+      also: 'Also appeared in non-archival <a href="https://generative-vision.github.io/workshop-CVPR-24/" target="_blank">CVPR 2024 Workshop on Generative Models for Computer Vision</a>'
+      keywords: ["Diffusion Models", "Counterfactual Generation", "Causal Representation Learning"]
+      abstract: >-
+        Diffusion probabilistic models (DPMs) have become the state-of-the-art in high-quality
+        image generation. However, DPMs have an arbitrary noisy latent space with no
+        interpretable or controllable semantics. Although there has been significant research
+        effort to improve image sample quality, there is little work on representation-
+        controlled generation using diffusion models. Specifically, causal modeling and
+        controllable counterfactual generation using DPMs is an underexplored area. In this
+        work, we propose CausalDiffAE, a diffusion-based causal representation learning
+        framework to enable counterfactual generation according to a specified causal model.
+        Our key idea is to use an encoder to extract high-level semantically meaningful causal
+        variables from high-dimensional data and model stochastic variation using reverse
+        diffusion. We propose a causal encoding mechanism that maps high-dimensional data to
+        causally related latent factors and parameterize the causal mechanisms among latent
+        factors using neural networks. To enforce the disentanglement of causal variables, we
+        formulate a variational objective and leverage auxiliary label information in a prior
+        to regularize the latent space. We propose a DDIM-based counterfactual generation
+        procedure subject to do-interventions. Finally, to address the limited label
+        supervision scenario, we also study the application of CausalDiffAE when a part of the
+        training data is unlabeled, which also enables granular control over the strength of
+        interventions in generating counterfactuals during inference. We empirically show that
+        CausalDiffAE learns a disentangled latent space and is capable of generating
+        high-quality counterfactual images.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2404.17735
+        - label: Proceedings
+          url: https://ebooks.iospress.nl/volumearticle/69875
+        - label: Poster
+          url: "pdfs/ECAI'24_Poster_Final.pdf"
+        - label: Code
+          url: https://github.com/Akomand/CausalDiffAE
+
+    - venue: "TMLR'24"
+      title: "From Identifiable Causal Representations to Controllable Counterfactual Generation: A Survey on Causal Generative Modeling"
+      authors: "Aneesh Komanduri, Xintao Wu, Yongkai Wu, Feng Chen"
+      venue_full: "Transactions on Machine Learning Research, 2024"
+      keywords: ["Survey", "Causal Representation Learning", "Counterfactual Generation"]
+      abstract: >-
+        Deep generative models have shown tremendous capability in data density estimation and
+        data generation from finite samples. While these models have shown impressive
+        performance by learning correlations among features in the data, some fundamental
+        shortcomings are their lack of explainability, tendency to induce spurious
+        correlations, and poor out-of-distribution extrapolation. To remedy such challenges,
+        recent work has proposed a shift toward causal generative models. Causal models offer
+        several beneficial properties to deep generative models, such as distribution shift
+        robustness, fairness, and interpretability. Structural causal models (SCMs) describe
+        data-generating processes and model complex causal relationships and mechanisms among
+        variables in a system. Thus, SCMs can naturally be combined with deep generative
+        models. We provide a technical survey on causal generative modeling categorized into
+        causal representation learning and controllable counterfactual generation methods. We
+        focus on fundamental theory, methodology, drawbacks, datasets, and metrics. Then, we
+        cover applications of causal generative models in fairness, privacy, out-of-
+        distribution generalization, precision medicine, and biological sciences. Lastly, we
+        discuss open problems and fruitful research directions for future work in the field.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2310.11011
+        - label: OpenReview
+          url: https://openreview.net/forum?id=PUpZXvNqmb
+        - label: GitHub
+          url: https://github.com/Akomand/Causal-Generative-Modeling-Survey
+
+    - venue: "IJCAI'24"
+      title: "Learning Causally Disentangled Representations via the Principle of Independent Causal Mechanisms"
+      authors: "Aneesh Komanduri, Yongkai Wu, Feng Chen, Xintao Wu"
+      venue_full: "Proceedings of the 33rd International Joint Conference on Artificial Intelligence, 2024"
+      highlight: "Long Oral: top 2.3%"
+      also: 'Also appeared in non-archival <a href="https://crl-workshop.github.io/" target="_blank">NeurIPS 2023 Workshop on Causal Representation Learning</a>'
+      keywords: ["Causal Disentanglement", "VAE", "Representation Learning"]
+      abstract: >-
+        Learning disentangled causal representations is a challenging problem that has gained
+        significant attention recently due to its implications for extracting meaningful
+        information for downstream tasks. In this work, we define a new notion of causal
+        disentanglement from the perspective of independent causal mechanisms. We propose
+        ICM-VAE, a framework for learning causally disentangled representations supervised by
+        causally related observed labels. We model causal mechanisms using nonlinear learnable
+        flow-based diffeomorphic functions to map noise variables to latent causal variables.
+        Further, to promote the disentanglement of causal factors, we propose a causal
+        disentanglement prior learned from auxiliary labels and the latent causal structure.
+        We theoretically show the identifiability of causal factors and mechanisms up to
+        permutation and elementwise reparameterization. We empirically demonstrate that our
+        framework induces highly disentangled causal factors, improves interventional
+        robustness, and is compatible with counterfactual generation.
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2306.01213
+        - label: Proceedings
+          url: https://www.ijcai.org/proceedings/2024/476
+        - label: Poster
+          url: "pdfs/IJCAI_Poster_Final.pdf"
+        - label: Code
+          url: https://github.com/Akomand/ICM-VAE
+
+    - venue: "IEEE BigData'22"
+      title: "SCM-VAE: Learning Identifiable Causal Representations via Structural Knowledge"
+      authors: "Aneesh Komanduri, Yongkai Wu, Feng Chen, Xintao Wu"
+      venue_full: "Proceedings of the IEEE International Conference on Big Data, 2022"
+      keywords: ["Structural Causal Models", "VAE", "Representation Learning"]
+      abstract: >-
+        The goal of causal representation learning is to map low-level observations to
+        high-level causal concepts to learn interpretable and robust representations for
+        various downstream tasks. Latent variable models such as the variational autoencoder
+        (VAE) are frequently leveraged to learn disentangled representations. However, there
+        are often complex non-linear causal relationships underlying the observed data that
+        cannot be captured through disentangled representations or linear dependence
+        assumptions. Further, an independent conditional prior assumption can make learning
+        causal dependencies in the latent space more challenging. We propose a framework,
+        coined SCM-VAE, which uses apriori causal knowledge, a structural causal prior, and a
+        non-linear additive noise structural causal model (SCM) to learn independent causal
+        mechanisms and identifiable causal representations. We conduct theoretical analysis
+        and perform experiments on synthetic and real-world datasets to show the improved
+        quality of learned causal representations and robustness under interventions.
+      links:
+        - label: Proceedings
+          url: https://ieeexplore.ieee.org/document/10021114
+        - label: Code
+          url: https://github.com/Akomand/SCM-VAE
+
+    - venue: "IEEE ICMLA'21"
+      title: "Neighborhood Random Walk Graph Sampling for Regularized Bayesian Graph Convolutional Neural Networks"
+      authors: "Aneesh Komanduri, Justin Zhan"
+      venue_full: "Proceedings of the IEEE International Conference on Machine Learning and Applications, 2021"
+      keywords: ["Graph Neural Networks", "Bayesian Deep Learning", "Node Classification"]
+      abstract: >-
+        In the modern age of social media and networks, graph representations of real-world
+        phenomena have become an incredibly useful source to mine insights. Often, we are
+        interested in understanding how entities in a graph are interconnected. The Graph
+        Neural Network (GNN) has proven to be a very useful tool in a variety of graph
+        learning tasks including node classification, link prediction, and edge
+        classification. However, in most of these tasks, the graph data we are working with
+        may be noisy and may contain spurious edges. That is, there is a lot of uncertainty
+        associated with the underlying graph structure. Recent approaches to modeling
+        uncertainty have been to use a Bayesian framework and view the graph as a random
+        variable with probabilities associated with model parameters. Introducing the Bayesian
+        paradigm to graph-based models, specifically for semi-supervised node classification,
+        has been shown to yield higher classification accuracies. However, the method of graph
+        inference proposed in recent work does not take into account the structure of the
+        graph. In this paper, we propose a novel algorithm called Bayesian Graph Convolutional
+        Network using Neighborhood Random Walk Sampling (BGCN-NRWS), which uses a Markov Chain
+        Monte Carlo (MCMC) based graph sampling algorithm utilizing graph structure, reduces
+        overfitting by using a variational inference layer, and yields consistently
+        competitive classification results compared to the state-of-the-art in semi-supervised
+        node classification.
+      links:
+        - label: Proceedings
+          url: https://ieeexplore.ieee.org/document/9679954
+        - label: Code
+          url: https://github.com/Akomand/BGCN_TORCH
